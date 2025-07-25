@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receipt</title>
+  <style>
+    @media print {
+      @page {
+        size: 80mm auto;
+        margin: 5mm;
+      }
+    }
+
+    body {
+      font-family: monospace;
+      font-size: 12px;
+      width: 72mm;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .info-block {
+      text-align: center;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .line {
+      border-top: 1px dashed #000;
+      margin: 6px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    th {
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #000;
+      padding-bottom: 3px;
+    }
+
+    td {
+      padding: 4px 0;
+    }
+
+    .total-line td {
+      font-weight: bold;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      padding: 4px 0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    .qr {
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .served-by {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    .item-label {
+      font-weight: bold;
+    }
+
+    .item-sub {
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .item-sub span:first-child {
+      flex: 1;
+    }
+
+    .item-sub span:last-child {
+      text-align: right;
+      min-width: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>NAO PACKAGING SOLUTIONS</h2>
+  <h2>Receipt</h2>
+  <div class="info-block">
+    NAO SHOPS<br>
+    https://nao.imaralims.com<br>
+    Dealers in Disposable plates, caps, punnet, Film, Foils, Carrier Bags & Khaki bags.<br>
+    Next to Salvation Army. FA8 Opposite OTC<br>
+    ENQUIRIES: 0723 044 08 / 0741 828 85 / 0745 231 95 / 0776 071 90 / 0798 820 26
+  </div>
+
+  <div class="section">
+    <strong>Receipt No:</strong> 0056<br>
+    <strong>Date:</strong> 25/07/2025 08:47 AM
+  </div>
+
+  <div class="line"></div>
+
+  <!-- Items Table -->
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 5%;">#</th>
+        <th style="width: 75%;">Item (Unit × Price)</th>
+        <th style="width: 20%; text-align:right;">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Item 1 -->
+      <tr>
+        <td>1</td>
+        <td colspan="2" class="item-label">Clear Film Roll</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          <div class="item-sub">
+            <span>Roll (1) × 7,500</span>
+            <span>7,500</span>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Item 2 -->
+      <tr><td colspan="3">&nbsp;</td></tr>
+      <tr>
+        <td>2</td>
+        <td colspan="2" class="item-label">Garbage Bags XL</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          <div class="item-sub">
+            <span>Bales (2) × 1,200</span>
+            <span>2,400</span>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Item 3 -->
+      <tr><td colspan="3">&nbsp;</td></tr>
+      <tr>
+        <td>3</td>
+        <td colspan="2" class="item-label">Bio Containers</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          <div class="item-sub">
+            <span>Packets (5) × 300</span>
+            <span>1,500</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="line"></div>
+
+  <!-- Total -->
+  <table>
+    <tr class="total-line">
+      <td colspan="2">Total Paid:</td>
+      <td style="text-align:right;">KSh 11,400</td>
+    </tr>
+  </table>
+
+  <div class="line"></div>
+
+  <!-- Payment Info -->
+  <div class="section">
+    <strong>LIPA NA MPESA TILL NUMBER:</strong> 0<br>
+    <strong>MPESA PAYBILL:</strong> 542542<br>
+    <strong>ACCOUNT:</strong> 07185
+  </div>
+
+  <!-- Footer -->
+  <div class="served-by">
+    Served by: John Doe
+  </div>
+
+  <div class="footer">
+    Goods once sold cannot be returned.<br>
+    ** THANK YOU AND WELCOME AGAIN **<br>
+    RECEIPT #TT1580<br>
+    Jun 21, 2025, 10:35:49 AM
+  </div>
+
+  <div class="qr">
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?data=https://nao.imaralims.com&size=100x100"
+      alt="QR Code"
+      width="100"
+      height="100"
+    />
+  </div>
+
+</body>
+</html>

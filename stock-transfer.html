@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock Transfer Receipt</title>
+  <style>
+    @media print {
+      @page {
+        size: 80mm auto;
+        margin: 5mm;
+      }
+    }
+
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      width: 72mm;
+    }
+
+    .receipt {
+      padding: 10px;
+    }
+
+    h2, h4 {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .info-block {
+      margin-bottom: 6px;
+    }
+
+    .info-block strong {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      font-weight: bold;
+      border-bottom: 1px dashed #000;
+      padding-bottom: 4px;
+    }
+
+    td {
+      padding: 2px 0;
+    }
+
+    .qty, .price, .total {
+      text-align: right;
+    }
+
+    .spacer-row td {
+      padding-top: 6px;
+    }
+
+    .line {
+      border-top: 1px dashed #000;
+      margin: 5px 0;
+    }
+
+    .disclaimer, .served-by, .footer {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .barcode {
+      display: block;
+      margin: 10px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .total-table td {
+      font-weight: bold;
+      padding: 2px 0;
+    }
+
+    .item-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="receipt">
+
+    <h2 style="margin-bottom: 0; font-size: 20px;">Nao Shops Limited</h2>
+    <p style="text-align:center; margin-top: 0;">Main Store</p>
+
+    <h2>Stock Transfer</h2>
+    <h4>Ref: #REF123456</h4>
+
+    <div class="section">
+      <div class="info-block">
+        <strong>Date:</strong> 25/07/2025
+      </div>
+      <div class="info-block">
+        <strong>From:</strong>
+        Warehouse A<br>
+        123 Main Street<br>
+        Nairobi, KE
+      </div>
+      <div class="info-block">
+        <strong>To:</strong>
+        Branch B<br>
+        456 Side Rd<br>
+        Mombasa, KE
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Item table header -->
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 5%;">#</th>
+          <th style="width: 55%;">Unit</th>
+          <th style="width: 15%;" class="qty">Qty</th>
+          <th style="width: 25%;" class="total">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Item 1 -->
+        <tr>
+          <td>1</td>
+          <td colspan="3" class="item-label">HP Laptop</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Bale (2) x 60,000</td>
+          <td class="qty">2</td>
+          <td class="total">KES 120,000</td>
+        </tr>
+
+        <tr class="spacer-row"><td colspan="4"></td></tr>
+
+        <!-- Item 2 -->
+        <tr>
+          <td>2</td>
+          <td colspan="3" class="item-label">USB Cable</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Packet (5) x 1,000</td>
+          <td class="qty">5</td>
+          <td class="total">KES 5,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="line"></div>
+
+    <!-- Totals -->
+    <div class="section">
+      <table class="total-table" style="width: 100%;">
+        <tr>
+          <td>Net Total</td>
+          <td class="total" style="text-align:right;">KES 125,000</td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td class="total" style="text-align:right;">KES 1,000</td>
+        </tr>
+        <tr>
+          <td><strong>Final Total</strong></td>
+          <td class="total" style="text-align:right;"><strong>KES 126,000</strong></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Notes -->
+    <div class="section">
+      <strong>Notes:</strong><br>
+      Handle with care. Deliver by 27th.
+    </div>
+
+    <!-- Footer -->
+    <div class="served-by">
+      Served by: Terry
+    </div>
+
+    <div class="disclaimer">
+      Goods once sold cannot be returned.
+    </div>
+
+    <img
+      class="barcode"
+      src="https://barcode.tec-it.com/barcode.ashx?data=REF123456&code=Code128&translate-esc=false"
+      alt="Barcode: REF123456"
+    />
+
+    <div class="line"></div>
+    <p class="footer">Thank you and welcome again!</p>
+  </div>
+</body>
+</html>
