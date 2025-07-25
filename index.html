@@ -1,184 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Stock Transfer Receipt</title>
-  <style>
-    @media print {
-      @page {
-        size: 80mm auto;
-        margin: 5mm;
-      }
-    }
-
-    body {
-      font-family: monospace;
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      width: 72mm;
-    }
-
-    .receipt {
-      padding: 10px;
-    }
-
-    h2, h4 {
-      text-align: center;
-      margin: 5px 0;
-    }
-
-    .section {
-      margin-bottom: 10px;
-    }
-
-    .info-block {
-      margin-bottom: 6px;
-    }
-
-    .info-block strong {
-      display: block;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      text-align: left;
-      padding: 2px 0;
-    }
-
-    .subtotal, .total, .price {
-      font-weight: bold;
-      text-align: right;
-    }
-
-    .barcode {
-      display: block;
-      margin: 10px auto;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .line {
-      border-top: 1px dashed #000;
-      margin: 5px 0;
-    }
-
-    .disclaimer, .served-by {
-      text-align: center;
-      font-size: 11px;
-      margin-top: 5px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-  <div class="receipt">
 
-    <h2 style="margin-bottom: 0; font-size: 25px;">Nao Shops LTD</h2>
-    <!-- <p style="text-align:center; margin-top: 0;">P.O. Box 12345-00100, Nairobi | +254 712 345678</p> -->
-
-    <h2>Stock Transfer</h2>
-    <h4>Ref: #REF123456</h4>
-
-    <div class="section">
-      <div class="info-block">
-        <strong>Date:</strong> 25/07/2025
-      </div>
-      <div class="info-block">
-        <strong>From:</strong>
-        Warehouse A<br>
-        123 Main Street<br>
-        Nairobi, KE
-      </div>
-      <div class="info-block">
-        <strong>To:</strong>
-        Branch B<br>
-        456 Side Rd<br>
-        Mombasa, KE
-      </div>
-    </div>
-
-    <div class="line"></div>
-
-    <div class="section">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Item</th>
-            <th>Qty</th>
-            <th class="price">Price</th>
-            <th class="subtotal">Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>
-              HP Laptop<br><small>SKU: HP-001</small>
-            </td>
-            <td>2</td>
-            <td class="price">KES 60,000</td>
-            <td class="subtotal">KES 120,000</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>
-              USB Cable<br><small>SKU: USB-123</small>
-            </td>
-            <td>5</td>
-            <td class="price">KES 1,000</td>
-            <td class="subtotal">KES 5,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="line"></div>
-
-    <div class="section">
-      <table>
-        <tr>
-          <td>Net Total</td>
-          <td class="total">KES 125,000</td>
-        </tr>
-        <tr>
-          <td>Shipping</td>
-          <td class="total">KES 1,000</td>
-        </tr>
-        <tr>
-          <td><strong>Final Total</strong></td>
-          <td class="total"><strong>KES 126,000</strong></td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="line"></div>
-
-    <div class="section">
-      <strong>Notes:</strong><br>
-      Handle with care. Deliver by 27th.
-    </div>
-
-    <div class="served-by">
-      Served by: John Doe
-    </div>
-
-    <div class="disclaimer">
-      Goods once sold cannot be returned.
-    </div>
-
-    <img
-      class="barcode"
-      src="https://barcode.tec-it.com/barcode.ashx?data=REF123456&code=Code128&translate-esc=false"
-      alt="Barcode: REF123456"
-    />
-
-    <div class="line"></div>
-    <p style="text-align:center;">Thank you and welcome again!</p>
+  <div class="container">
+    <h1 class="mt-5">Welcome to the POS Receipts Application</h1>
+    <p class="lead">This application allows you to view and print various types of receipts.</p>
+    <ul class="list-group mt-3">
+      <li class="list-group-item">
+        <a href="invoice.html" target="_blank" class="btn btn-sm btn-primary">View Invoice Receipt</a>
+      </li>
+      <li class="list-group-item">
+        <a href="purchase-info.html" target="_blank" class="btn btn-sm btn-primary">View Purchase Invoice</a>
+      </li>
+      <li class="list-group-item">
+        <a href="stock-transfer.html" target="_blank" class="btn btn-sm btn-primary">View Stock Transfer</a>
+      </li>
+    </ul>
   </div>
+  
 </body>
 </html>
